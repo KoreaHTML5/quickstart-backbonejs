@@ -1,4 +1,4 @@
-# Quickstart for Backbonejs
+# Quickstart for ExtJS
 
 # CONTRIBUTE
 
