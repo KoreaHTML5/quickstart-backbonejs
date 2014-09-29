@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quckstart for Backbone.js</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+
+	<!-- build:js scripts/vendor.js -->
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/underscore/underscore.js"></script>
+	<script src="../bower_components/backbone/backbone.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js scripts/main.min.js -->
+	<script src="scripts/person-model.js"></script>
+	<script src="scripts/person-collection.js"></script>
+	<script src="scripts/person-view.js"></script>
+	<script src="scripts/application-view.js"></script>
+	<!-- endbuild -->
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 id="slogan">
+				Hello World,
+				<br>
+				Hello <img class="logo" src="images/backbone-logo.png" alt="Backbone.js">
+			</h1>
+			<p class="lead"></p>
+		</div>
+		<div class="application">
+			<div class="form-area">
+				<form>
+					<p>
+						<label>
+							<span class="category">이름</span>
+							<input name="name" size="6" placeholder="Name" required autofocus>
+						</label>
+					</p>
+					<p>
+						<label>
+							<span class="category">나이</span>
+							<input name="age" size="6" required placeHOlder="0">
+						</label>
+					</p>
+					<p>
+						<span class="category">성별</span>
+						<label>
+							<input type="radio" name="gender" value="male">
+							<span class="gender">남성</span>
+						</label>
+						<label>
+							<input type="radio" name="gender" value="female">
+							<span class="gender">여성</span>
+						</label>
+					</p>
+					<p>
+						<span class="category">피부색</span>
+						<label>
+							<input type="radio" name="skin" value="#A27B62">
+							<span class="skin" style="background-color:#A27B62">어두운색</span>
+						</label>
+						<label>
+							<input type="radio" name="skin" value="#fbceb1">
+							<span class="skin" style="background-color:#fbceb1">살구색</span>
+						</label>
+						<label>
+							<input type="radio" name="skin" value="#F8A9A9">
+							<span class="skin" style="background-color:#F8A9A9">분홍색</span>
+						</label>
+					</p>
+					<button type="submit">Add</button>
+				</form>
+				<div class="sort">
+					<label>
+						<input type="radio" name="sort" value="name">
+						이름 순 정렬
+					</label>
+					<label>
+						<input type="radio" name="sort" value="age">
+						나이 순 정렬
+					</label>
+				</div>
+
+			</div>
+			<div class="world">
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/template" id="personViewTemplate">
+		<div class="face" style="background-color:<%= skin %>"></div>
+		<div class="info">
+			<strong><%= name %></strong>
+			<small>(<%= age %>, <%= gender === "male" ? "남" : "여" %>)</small>
+		</div>
+		<a href="javascript:;" class="remove">&times;</a>
+	</script>
+	<script>
+		var app = new Application({
+			$el: $(".application")
+		});
+	</script>
+</body>
+</html>

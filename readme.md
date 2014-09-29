@@ -1,4 +1,4 @@
-# Quickstart for ExtJS
+# Quickstart for Backbone.js
 
 # CONTRIBUTE
 

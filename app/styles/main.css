@@ -1,0 +1,93 @@
+html, body {
+	margin: 0;
+	padding: 10px;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 730px;
+}
+
+.container h4 {
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+
+.jumbotron {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 64px;
+	padding-left: 64px;
+	margin-bottom: 30px;
+	background-color: #eaeaea;
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+	border-radius: 6px;
+}
+
+.jumbotron .logo {width:200px;vertical-align:middle;}
+
+.jumbotron h1 {
+	color:#555;
+}
+
+.jumbotron h2 {
+	max-width: 300px
+}
+
+.row {
+	position: relative;
+	margin: 30px 0;
+	min-height: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+ul#icheck-input {
+	padding: 0;
+}
+
+ul#icheck-input li {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul#icheck-input label {
+	margin-left: 10px;
+	font-family: inherit;
+	font-size: 16px;
+}
+
+.application {overflow:hidden;}
+
+.form-area {float:left;width:34%;padding:1%;}
+.form-area form {padding:5px;background-color:#f8f8f8;border-radius: 6px;}
+.form-area .sort {padding:10px;background-color:#f8f8f8;border-radius: 6px;margin-top:10px;text-align:center;font-size:12px;}
+form p {margin:10px;}
+form button {width:100%;height:32px;border-radius: 3px;background-color:#e3e3e3;border:none;}
+.category {display:inline-block;width:50px;font-size:12px;vertical-align:middle;}
+.gender {font-size:12px;}
+.skin {display:inline-block;overflow:hidden;width:20px;height:20px;text-indent:-9999px;border:3px solid transparent;border-radius:24px;vertical-align:middle;}
+
+/*input[type="radio"] {display:none;}*/
+input[type="radio"]:checked + .skin {border-color:rgba(0,0,0,0.5);}
+
+.world {float:right;width:62%;padding:1%;}
+.world .person {position:relative;display:inline-block;overflow:hidden;width:96px;padding:8px 4px;margin:4px;text-align:center;border-radius:6px;}
+.world .person.selected {background:#f3f3f3;}
+.world .person .face {display:inline-block;width:64px;height:64px;background-image:url(../images/face.png);background-repeat:no-repeat;background-size:50px auto;background-position:50% 50%;}
+.world .person .info {text-align:center;}
+.world .person .info strong {display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.world .person .remove {display:none;position:absolute;top:2px;right:2px;padding:3px;color:red;text-decoration: none;}
+.world .person:hover .remove {display:block;}
+
